@@ -1,0 +1,28 @@
+
+@media(max-width:1650px){
+    .main{
+        width: 65vw;
+    }
+    .right{
+        width: 20vw;
+    }
+}
+@media (max-width:1300px){
+    .right{
+        display: none;
+    }
+    .main{
+        width: 70vw;
+    }
+    .left{
+        width: 25vw;
+    }
+}
+@media (max-width:1000px){
+    .left{
+        display: none;
+    }
+    .main{
+        width: 100%;
+    }
+}
