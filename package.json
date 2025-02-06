@@ -1,18 +1,22 @@
 {
   "name": "my-create-react-app",
-  "homepage": "https://github.com/amanllah10/newfacebook",
+  "homepage": "https://github.com/amanllah10/newfreshyoutube",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.3",

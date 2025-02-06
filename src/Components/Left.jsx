@@ -1,62 +1,72 @@
 import React from 'react'
-import news from './news.png'
-import './Left.css'
-import friends from './friends.png'
-import group from './group.png'
-import marketplace from './marketplace.png'
-import watch from './watch.png'
-import shortcut1 from './shortcut-1.png'
-import shortcut2 from './shortcut-2.png'
-import shortcut3 from './shortcut-3.png'
-import shortcut4 from './shortcut-4.png'
-
+import home from './home.png'
+import explore from './explore.png'
+import subscription from './subscription.png'
+import library from './library.png'
+import history from './history.png'
+import yourvideos from './your-video.png'
+import watchlater from './watch-later.png'
+import likevideos from './liked video.png'
+import watchmore from './show more.png'
+import { useNavigate } from 'react-router-dom'
 
 const Left = () => {
+    const navigate = useNavigate()
+    const addPage = ()=>{
+        navigate('/addpage')
+    }
     return (
-        <>
-            <div className='leftcont'>
-                <div className='flex m-5 items-center text-gray-800'>
-                    <img src={news} alt="" className='m-2' />
-                    <h1>Latest news</h1>
+        <div>
+
+            <div className='border-b-2 border-black'>
+                <div className = 'flex items-center'>
+
+                    <img className='m-2' src={home} alt="" />
+                    <span>Home</span>
                 </div>
-                <div className='flex m-5 items-center'>
-                    <img src={friends} alt="" className='m-2' />
-                    <h1>Friends</h1>
+                <div className = 'flex items-center'>
+
+                    <img className='m-2' src={explore} alt="" />
+                    <span>Explore</span>
                 </div>
-                <div className='flex m-5 items-center'>
-                    <img src={group} alt="" className='m-2' />
-                    <h1>Group</h1>
-                </div>
-                <div className='flex m-5 items-center'>
-                    <img src={marketplace} alt="" className='m-2' />
-                    <h1>Marketplace</h1>
-                </div>
-                <div className='flex m-5 items-center'>
-                    <img src={watch} alt="" className='m-2' />
-                    <h1>Watch</h1>
-                </div>
-                <button className='m-5'>See more</button>
-            </div>
-            <div className='text-gray-800'>
-                <h1 className='m-3 font-bold'>Your Shortcuts</h1>
-                <div className='flex items-center m-5'>
-                    <img src={shortcut1} alt="" className='m-2' />
-                    <h1>Web development</h1>
-                </div>
-                <div className='flex items-center m-5'>
-                    <img src={shortcut2} alt="" className='m-2' />
-                    <h1>Web design course</h1>
-                </div>
-                <div className='flex items-center m-5'>
-                    <img src={shortcut3} alt="" className='m-2' />
-                    <h1>Full Stack development</h1>
-                </div>
-                <div className='flex items-center m-5'>
-                    <img src={shortcut4} alt="" className='m-2' />
-                    <h1>Website Experts</h1>
+                <div className = 'flex items-center'>
+
+                    <img className='m-2' src={subscription} alt="" />
+                    <span>Subscription</span>
                 </div>
             </div>
-        </>
+            <div className = 'flex items-center'>
+
+                <img className='m-3' src={library} alt="" />
+                <span>library</span>
+            </div>
+            <div className = 'flex items-center'>
+
+                <img className='m-3' src={history} alt="" />
+                <span>history</span>
+            </div>
+            <div className = 'flex items-center'>
+
+                <img className='m-3' src={yourvideos} alt="" />
+                <span>Your Videos</span>
+            </div>
+            <div className = 'flex items-center'>
+
+                <img className='m-3' src={watchlater} alt="" />
+                <span>Watch later</span>
+            </div>
+            <div className = 'flex items-center'>
+
+                <img className='m-3' src={likevideos} alt="" onClick={addPage} />
+                <span>Like videos</span>
+            </div>
+            <div className = 'flex items-center'>
+
+                <img className='m-3' src={watchmore} alt="" />
+                <span>Show more</span>
+            </div>
+
+        </div>
     )
 }
 
